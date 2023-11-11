@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
-This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+
+  <lib desc="#Wiring" name="0">
     <tool name="Pin">
       <a name="width" val="2"/>
     </tool>
@@ -32,7 +33,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#C:\Users\umota\Documents\0 - PROJETOS\1 - Projetos externos\Faculdade\AC-processador-mips\Circuitos\Decodificador_Opcode\Decodificador_Opcode.circ" name="7"/>
+  <lib desc="file#/home/nessuno/Documents/UTFPR/AC/Circuitos/Decodificador_Opcode/Decodificador_Opcode.circ" name="7"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -71,8 +72,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
-    <comp loc="(120,330)" name="unidade_de_controle_principal"/>
     <comp loc="(140,100)" name="unidade_de_controle_principal"/>
+    <comp loc="(140,460)" name="unidade_de_controle_principal"/>
     <comp lib="7" loc="(300,340)" name="Decodificador_Opcode"/>
   </circuit>
   <circuit name="unidade_de_controle_principal">
@@ -184,6 +185,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(860,190)" to="(940,190)"/>
     <wire from="(910,380)" to="(990,380)"/>
     <wire from="(60,150)" to="(190,150)"/>
+    <comp lib="2" loc="(210,110)" name="Multiplexer">
+      <a name="width" val="14"/>
+    </comp>
+    <comp lib="0" loc="(990,290)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MenRead"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="2" loc="(840,200)" name="Multiplexer">
+      <a name="width" val="14"/>
+    </comp>
     <comp lib="0" loc="(40,120)" name="Pin">
       <a name="facing" val="south"/>
       <a name="width" val="6"/>
@@ -191,21 +204,82 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Opcode"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(990,260)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="MenToReg"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(180,120)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0x400"/>
-    </comp>
     <comp lib="0" loc="(990,350)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="Branch"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="2" loc="(140,100)" name="Multiplexer">
+      <a name="width" val="14"/>
+    </comp>
+    <comp lib="2" loc="(630,170)" name="Multiplexer">
+      <a name="width" val="14"/>
+    </comp>
+    <comp lib="0" loc="(180,120)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0x400"/>
+    </comp>
+    <comp lib="2" loc="(420,140)" name="Multiplexer">
+      <a name="width" val="14"/>
+    </comp>
+    <comp lib="0" loc="(600,180)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0x303"/>
+    </comp>
+    <comp lib="0" loc="(670,190)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0x1000"/>
+    </comp>
+    <comp lib="0" loc="(990,500)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="WriteRegEx"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(110,110)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0xc"/>
+    </comp>
+    <comp lib="0" loc="(990,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="ALUSrc"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(990,440)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Link"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="7" loc="(40,180)" name="Decodificador_Opcode"/>
+    <comp lib="2" loc="(490,150)" name="Multiplexer">
+      <a name="width" val="14"/>
+    </comp>
+    <comp lib="0" loc="(320,140)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0x19"/>
+    </comp>
+    <comp lib="0" loc="(460,160)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0x91"/>
+    </comp>
+    <comp lib="0" loc="(990,470)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="ExcOut"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(990,170)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="RegDst"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(530,170)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0x91"/>
     </comp>
     <comp lib="0" loc="(840,200)" name="Splitter">
       <a name="fanout" val="13"/>
@@ -225,61 +299,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit12" val="11"/>
       <a name="bit13" val="12"/>
     </comp>
-    <comp lib="7" loc="(40,180)" name="Decodificador_Opcode"/>
-    <comp lib="0" loc="(390,150)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0x79"/>
-    </comp>
-    <comp lib="0" loc="(990,170)" name="Pin">
+    <comp lib="0" loc="(990,380)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="RegDst"/>
+      <a name="label" val="Bne"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="2" loc="(490,150)" name="Multiplexer">
-      <a name="width" val="14"/>
-    </comp>
-    <comp lib="2" loc="(770,190)" name="Multiplexer">
-      <a name="width" val="14"/>
-    </comp>
-    <comp lib="0" loc="(320,140)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0x18"/>
-    </comp>
-    <comp lib="2" loc="(350,130)" name="Multiplexer">
-      <a name="width" val="14"/>
-    </comp>
-    <comp lib="0" loc="(740,200)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0x2000"/>
-    </comp>
-    <comp lib="0" loc="(250,130)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0xc08"/>
+    <comp lib="0" loc="(990,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MenToReg"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(810,210)" name="Constant">
       <a name="width" val="14"/>
       <a name="value" val="0x8"/>
-    </comp>
-    <comp lib="0" loc="(990,290)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="MenRead"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(110,90)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(530,170)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0x91"/>
-    </comp>
-    <comp lib="2" loc="(420,140)" name="Multiplexer">
-      <a name="width" val="14"/>
-    </comp>
-    <comp lib="2" loc="(560,160)" name="Multiplexer">
-      <a name="width" val="14"/>
     </comp>
     <comp lib="0" loc="(990,200)" name="Pin">
       <a name="facing" val="west"/>
@@ -287,72 +321,23 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="WriteReg"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="2" loc="(140,100)" name="Multiplexer">
+    <comp lib="0" loc="(390,150)" name="Constant">
       <a name="width" val="14"/>
+      <a name="value" val="0x79"/>
     </comp>
-    <comp lib="0" loc="(990,380)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Bne"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(990,500)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="WriteRegEx"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(990,230)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="ALUSrc"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(460,160)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0x91"/>
-    </comp>
-    <comp lib="0" loc="(990,470)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="ExcOut"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="2" loc="(840,200)" name="Multiplexer">
-      <a name="width" val="14"/>
-    </comp>
-    <comp lib="2" loc="(210,110)" name="Multiplexer">
-      <a name="width" val="14"/>
-    </comp>
-    <comp lib="0" loc="(990,410)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Jump"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="2" loc="(700,180)" name="Multiplexer">
-      <a name="width" val="14"/>
-    </comp>
-    <comp lib="0" loc="(990,440)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Link"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(110,110)" name="Constant">
-      <a name="width" val="14"/>
-      <a name="value" val="0xc"/>
-    </comp>
-    <comp lib="2" loc="(280,120)" name="Multiplexer">
-      <a name="width" val="14"/>
-    </comp>
-    <comp lib="2" loc="(630,170)" name="Multiplexer">
+    <comp lib="2" loc="(770,190)" name="Multiplexer">
       <a name="width" val="14"/>
     </comp>
     <comp lib="0" loc="(990,320)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="MenWrite"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(990,410)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Jump"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(990,140)" name="Pin">
@@ -362,13 +347,29 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ALUOp"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(670,190)" name="Constant">
+    <comp lib="2" loc="(350,130)" name="Multiplexer">
       <a name="width" val="14"/>
-      <a name="value" val="0x1000"/>
     </comp>
-    <comp lib="0" loc="(600,180)" name="Constant">
+    <comp lib="2" loc="(560,160)" name="Multiplexer">
       <a name="width" val="14"/>
-      <a name="value" val="0x303"/>
+    </comp>
+    <comp lib="2" loc="(700,180)" name="Multiplexer">
+      <a name="width" val="14"/>
+    </comp>
+    <comp lib="2" loc="(280,120)" name="Multiplexer">
+      <a name="width" val="14"/>
+    </comp>
+    <comp lib="0" loc="(250,130)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0xc08"/>
+    </comp>
+    <comp lib="0" loc="(110,90)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(740,200)" name="Constant">
+      <a name="width" val="14"/>
+      <a name="value" val="0x2000"/>
     </comp>
   </circuit>
 </project>
