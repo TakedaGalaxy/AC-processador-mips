@@ -72,3 +72,4 @@ MAIN:
 addi $s0, $zero, 9
 addi $a0, $zero, 2 
 jal FUNC
+sub $s0, $s0, $s0  
